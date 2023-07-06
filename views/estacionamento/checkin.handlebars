@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="./img/icon.png" height="50">
+  </a>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/checkin">Check-in</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/estacionamento">Estacionamento</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/historico">Historico</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a  class="nav-link" href="/logout/">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Check-in</h2>
+    </div>
+    <div class="card-body">
+      <form action="/savecheckin" method="post">
+        <div class="row">
+          <div class="col">
+            <label for="placa">Placa:</label>
+            <input class="form-control" type="text" name="placa" placeholder="Placa" pattern="[A-Za-z]{3}-[0-9]{4}" aria-describedby="help" required>
+            <small id="help" class="form-text text-muted">Placa padrão AAA-1234</small>
+          </div>
+          <div class="col">
+            <label for="modelo">Modelo:</label>
+            <input class="form-control" type="text" name="modelo" placeholder="Modelo" required>
+          </div>
+          <br>
+          <button class="btn btn-primary">Check-in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

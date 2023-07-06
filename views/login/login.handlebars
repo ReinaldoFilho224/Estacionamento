@@ -1,0 +1,24 @@
+<!-- login.hbs -->
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h2>Login</h2>
+    </div>
+    <div class="card-body">
+      {{#if showError}}
+      <div class="alert alert-danger" role="alert">
+        Usuário ou senha incorretos.
+      </div>
+      {{/if}}
+      <form action="/auth" method="post">
+        <label>Usuário:</label>
+        <input type="email" class="form-control" placeholder="Ex: fulustiano@acad.com" name="user">
+        <br>
+        <label>Senha:</label>
+        <input type="password" class="form-control" placeholder="*************" name="pass">
+        <br>
+        <button class="btn btn-success btn-block" style="float: right;">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

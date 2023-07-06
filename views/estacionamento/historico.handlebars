@@ -1,0 +1,37 @@
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <a href="/historico">
+        <button class="btn btn-sucess">Voltar</button>
+      </a>
+      <h2>Historico</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Número de Reserva</th>
+            <th scope="col">Tempo estacionado</th>
+            <th scope="col">Placa</th>
+            <th scope="col">Pago</th>
+            <th scope="col">Estacionado</th>
+            <th scope="col">Valor a Pago</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each posts}}
+          <tr>
+            <th scope="row">{{ndeReserva}}</th>
+            <td>{{tempo}} minutos</td>
+            <td>{{placadoCarro}}</td>
+            <td>{{pago}}</td>
+            <td>{{left}}</td>
+            <td>{{valorPago}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</div>
+<br>

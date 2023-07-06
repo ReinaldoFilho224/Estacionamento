@@ -1,0 +1,39 @@
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Check-out</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Número de Reserva</th>
+            <th scope="col">Placa</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Estacionado</th>
+            <th scope="col">Tempo estacionado</th>
+            <th scope="col">Valor a Pagar</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each posts}}
+          <tr>
+            <th scope="row">{{ndeReserva}}</th>
+            <td>{{placadoCarro}}</td>
+            <td>{{modeloCarro}}</td>
+            <td>{{left}}</td>
+            <td>{{tempo}} minutos</td>
+            <td>{{valorPago}}</td>
+            <td>
+              <form action="/pagar" method="post">
+                <button value={{id}} class="btn btn-primary" name="pagar">Pagar</button>
+              </form>
+            </td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</div>
